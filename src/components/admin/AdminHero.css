@@ -1,0 +1,576 @@
+/* components/admin/AdminHero.css */
+
+.admin-hero-container {
+  padding: 20px;
+  min-height: 100vh;
+  background: #0f1419;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 30px;
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.page-header p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Hero Form */
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Form Sections */
+.form-section {
+  background: #1a1a2e;
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.form-section:hover {
+  border-color: rgba(44, 95, 138, 0.3);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-section h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(44, 95, 138, 0.5);
+  display: inline-block;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #e0e0e0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  background: #0f1419;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2c5f8a;
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #6b7280;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Form Row (2 columns) */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* File Input Wrapper */
+.file-input-wrapper {
+  margin-top: 5px;
+}
+
+.file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #0f1419;
+  border: 1px solid rgba(44, 95, 138, 0.3);
+  border-radius: 10px;
+  color: #60a5fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.file-label:hover {
+  background: rgba(44, 95, 138, 0.1);
+  border-color: #2c5f8a;
+  transform: translateY(-2px);
+}
+
+.current-file {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #8b92a8;
+  word-break: break-all;
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #2c5f8a 0%, #1e4060 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(44, 95, 138, 0.4);
+}
+
+.save-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Preview Section */
+.preview-section {
+  margin-top: 40px;
+  background: #1a1a2e;
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.preview-section h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(44, 95, 138, 0.5);
+  display: inline-block;
+}
+
+/* Preview Card */
+.preview-card {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1a2e 100%);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.preview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2c5f8a, #60a5fa, #2c5f8a);
+}
+
+.preview-badge {
+  display: inline-block;
+  padding: 6px 15px;
+  background: rgba(44, 95, 138, 0.2);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: #60a5fa;
+  margin-bottom: 20px;
+  border: 1px solid rgba(44, 95, 138, 0.3);
+}
+
+.preview-card h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.preview-card h3 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  font-weight: 500;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.preview-card p {
+  color: #8b92a8;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preview-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.preview-btn-primary {
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #2c5f8a 0%, #1e4060 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(44, 95, 138, 0.3);
+}
+
+.preview-btn-secondary {
+  padding: 10px 25px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preview-btn-secondary:hover {
+  background: white;
+  color: #1e4060;
+  transform: translateY(-2px);
+}
+
+/* Loading State */
+.admin-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f1419;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Success/Error Messages */
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideInRight 0.3s ease;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideInRight 0.3s ease;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-hero-container {
+    padding: 15px;
+  }
+  
+  .form-row {
+    gap: 15px;
+  }
+  
+  .preview-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .preview-card h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-hero-container {
+    padding: 10px;
+  }
+  
+  .page-header {
+    padding: 15px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .form-section {
+    padding: 18px;
+  }
+  
+  .form-section h3 {
+    font-size: 1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .save-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .preview-card {
+    padding: 25px;
+  }
+  
+  .preview-card h2 {
+    font-size: 1.2rem;
+  }
+  
+  .preview-card h3 {
+    font-size: 0.9rem;
+  }
+  
+  .preview-card p {
+    font-size: 0.85rem;
+  }
+  
+  .preview-btn-primary,
+  .preview-btn-secondary {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+  
+  .file-label {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-hero-container {
+    padding: 8px;
+  }
+  
+  .page-header {
+    padding: 12px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .page-header p {
+    font-size: 0.8rem;
+  }
+  
+  .form-section {
+    padding: 15px;
+  }
+  
+  .form-group label {
+    font-size: 0.8rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .preview-card {
+    padding: 20px;
+  }
+  
+  .preview-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+  }
+  
+  .preview-card h2 {
+    font-size: 1rem;
+  }
+  
+  .preview-buttons {
+    gap: 10px;
+  }
+  
+  .preview-btn-primary,
+  .preview-btn-secondary {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Custom Scrollbar for Textareas */
+.form-group textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-group textarea::-webkit-scrollbar-track {
+  background: #0f1419;
+  border-radius: 3px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb {
+  background: #2c5f8a;
+  border-radius: 3px;
+}
+
+.form-group textarea::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+
+/* Animation for Preview Section */
+.preview-section {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects for Form Sections */
+.form-section {
+  transition: all 0.3s ease;
+}
+
+/* Focus Effects */
+.form-group input:focus,
+.form-group textarea:focus {
+  transform: translateY(-1px);
+}
+
+/* Disabled State */
+.save-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Tooltip for Buttons */
+.save-btn {
+  position: relative;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .admin-hero-container {
+    background: white;
+    padding: 0;
+  }
+  
+  .form-actions,
+  .file-input-wrapper,
+  .save-btn {
+    display: none;
+  }
+  
+  .preview-section {
+    break-inside: avoid;
+  }
+}

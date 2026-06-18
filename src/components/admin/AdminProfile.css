@@ -1,0 +1,471 @@
+/* components/admin/AdminProfile.css */
+.admin-profile-container {
+  padding: 20px;
+  min-height: 100vh;
+  background: #0f1419;
+}
+
+/* Profile Header */
+.profile-header {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.profile-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.profile-header p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Profile Content Layout */
+.profile-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+  background: #1a1a2e;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-avatar {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.profile-avatar svg {
+  font-size: 120px;
+  color: #2c5f8a;
+}
+
+.change-avatar-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #2c5f8a;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.change-avatar-btn:hover {
+  background: #1e4060;
+  transform: scale(1.05);
+}
+
+.profile-info h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  color: #8b92a8;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.member-since {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Profile Form Container */
+.profile-form-container {
+  background: #1a1a2e;
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Form Styles */
+.profile-form {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group label svg {
+  color: #2c5f8a;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: #0f1419;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2c5f8a;
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #6b7280;
+}
+
+.disabled-input {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #1a1a2e;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2c5f8a 0%, #1e4060 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(44, 95, 138, 0.3);
+}
+
+.password-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.password-btn:hover {
+  background: rgba(44, 95, 138, 0.1);
+  border-color: #2c5f8a;
+  color: #2c5f8a;
+}
+
+/* Password Change Form */
+.password-form {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.password-form h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.password-form h3::before {
+  content: '';
+  width: 3px;
+  height: 20px;
+  background: #2c5f8a;
+  border-radius: 2px;
+}
+
+.update-password-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.update-password-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-sidebar {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .profile-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-profile-container {
+    padding: 15px;
+  }
+
+  .profile-header {
+    padding: 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-form-container {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .save-btn, .password-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-avatar svg {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-profile-container {
+    padding: 10px;
+  }
+
+  .profile-form-container {
+    padding: 15px;
+  }
+
+  .form-group input {
+    padding: 10px 12px;
+  }
+
+  .save-btn, .password-btn, .update-password-btn {
+    padding: 10px 20px;
+  }
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0f1419;
+  color: white;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #2a2a3e;
+  border-top-color: #2c5f8a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success Message */
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Error Message */
+.error-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease;
+  z-index: 1000;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive Table for small screens */
+@media (max-width: 768px) {
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  
+  .form-group input {
+    font-size: 0.9rem;
+  }
+  
+  .save-btn, .password-btn, .update-password-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .admin-profile-container {
+    background: #0f1419;
+  }
+}
+
+/* Print styles */
+@media print {
+  .admin-profile-container {
+    background: white;
+  }
+  
+  .save-btn, .password-btn, .change-avatar-btn {
+    display: none;
+  }
+  
+  .profile-sidebar {
+    break-inside: avoid;
+  }
+  
+  .profile-form-container {
+    break-inside: avoid;
+  }
+}

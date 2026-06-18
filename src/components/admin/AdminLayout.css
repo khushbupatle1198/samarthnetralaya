@@ -1,0 +1,18 @@
+/* components/admin/AdminLayout.css */
+.admin-layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background: #0f1419;
+}
+
+.admin-main-content {
+  flex: 1;
+  margin-left: 280px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .admin-main-content {
+    margin-left: 0;
+  }
+}
