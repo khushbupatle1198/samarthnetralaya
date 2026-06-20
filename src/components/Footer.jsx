@@ -1,4 +1,4 @@
-// components/Footer.jsx
+// components/Footer.jsx - Updated with Logo Image & Developer Credit
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -16,7 +16,9 @@ import {
   FaHeart,
   FaClock,
   FaAmbulance,
-  FaShieldAlt
+  FaShieldAlt,
+  FaCode,
+  FaExternalLinkAlt
 } from 'react-icons/fa';
 import './Footer.css';
 
@@ -90,7 +92,7 @@ const Footer = () => {
       <div className="footer-main">
         <div className="footer-container">
           <div className="footer-grid">
-            {/* Brand Section */}
+            {/* Brand Section with Logo Image */}
             <motion.div 
               className="footer-brand"
               initial={{ opacity: 0, y: 30 }}
@@ -99,8 +101,19 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <div className="footer-logo">
-                <div className="logo-icon-glow">
-                  <FaEye />
+                <img 
+                  src="/images/logo.webp" 
+                  alt="Samarth Netralaya Logo" 
+                  className="footer-logo-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.querySelector('.footer-logo-fallback').style.display = 'flex';
+                  }}
+                />
+                <div className="footer-logo-fallback" style={{ display: 'none' }}>
+                  <div className="logo-icon-glow">
+                    <FaEye />
+                  </div>
                 </div>
                 <div className="logo-text">
                   <span className="logo-main">Samarth</span>
@@ -255,6 +268,33 @@ const Footer = () => {
               <Link to="/terms">Terms of Service</Link>
               <Link to="/sitemap">Sitemap</Link>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Developer Credit - New Section */}
+      <div className="footer-developer">
+        <div className="footer-container">
+          <div className="developer-content">
+            <motion.div 
+              className="developer-credit"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <FaCode className="developer-icon" />
+              <span>Developed with ❤️ by</span>
+              <a 
+                href="https://sujitmportfolio.netlify.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="developer-link"
+              >
+                Sujit Manapure
+                <FaExternalLinkAlt className="external-icon" />
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>

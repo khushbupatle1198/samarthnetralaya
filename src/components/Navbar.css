@@ -1,4 +1,4 @@
-/* components/Navbar.css - Same as before */
+/* components/Navbar.css - Updated with Logo Image Support */
 .navbar {
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@
   height: 100%;
 }
 
-/* Logo */
+/* Logo with Image */
 .nav-logo {
   text-decoration: none;
 }
@@ -39,9 +39,23 @@
   gap: 0.75rem;
 }
 
-.logo-icon {
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo-image {
+  height: 35px;
+}
+
+.logo-icon-fallback {
   font-size: 1.8rem;
   color: #60a5fa;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-text {
@@ -252,6 +266,10 @@
   padding-left: 1.5rem;
 }
 
+.item-icon {
+  font-size: 1rem;
+}
+
 /* Right Section */
 .nav-actions {
   display: flex;
@@ -430,6 +448,22 @@
     padding: 0 1rem;
   }
   
+  .logo-image {
+    height: 32px;
+  }
+  
+  .navbar.scrolled .logo-image {
+    height: 28px;
+  }
+  
+  .logo-main {
+    font-size: 1rem;
+  }
+  
+  .logo-sub {
+    font-size: 0.6rem;
+  }
+  
   .mobile-menu {
     max-width: 280px;
   }
@@ -442,5 +476,13 @@
 @media (max-width: 480px) {
   .mobile-menu {
     max-width: 100%;
+  }
+  
+  .logo-image {
+    height: 28px;
+  }
+  
+  .logo-main {
+    font-size: 0.9rem;
   }
 }

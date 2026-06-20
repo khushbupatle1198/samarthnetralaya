@@ -1,4 +1,4 @@
-// components/Navbar.jsx - Updated
+// components/Navbar.jsx - Updated with Logo Image
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -37,7 +37,7 @@ const Navbar = () => {
     "Telemedicine Services", "Eye Emergencies"
   ];
 
-  // ✅ Updated Media Items - Only Blog and Gallery
+  // Media Items - Blog and Gallery
   const mediaItems = [
     { name: "Blog", path: "/blogs", icon: <FaNewspaper /> },
     { name: "Gallery", path: "/gallery", icon: <FaImage /> }
@@ -117,10 +117,22 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">
-          {/* Logo */}
+          {/* Logo with Image */}
           <Link to="/" className="nav-logo">
             <div className="logo-wrapper">
-              <div className="logo-icon"><FaEye /></div>
+              <img 
+                src="/images/logo.webp" 
+                alt="Samarth Netralaya Logo" 
+                className="logo-image"
+                onError={(e) => {
+                  // Fallback to icon if image fails to load
+                  e.target.style.display = 'none';
+                  e.target.parentElement.querySelector('.logo-icon-fallback').style.display = 'flex';
+                }}
+              />
+              <div className="logo-icon-fallback" style={{ display: 'none' }}>
+                <FaEye />
+              </div>
               <div className="logo-text">
                 <span className="logo-main">Samarth</span>
                 <span className="logo-sub">Netralaya</span>
