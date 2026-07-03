@@ -66,9 +66,9 @@ const Footer = () => {
   ];
 
   const workingHours = {
-    weekdays: "8:00 AM – 8:00 PM",
-    saturday: "8:00 AM – 8:00 PM",
-    sunday: "By Appointment Only",
+    Morning: "10:00 AM – 2:00 AM",
+    Evening: "6:00 AM – 8:30 PM",
+    sunday: "Off",
     emergency: "24/7 Available"
   };
 
@@ -198,35 +198,39 @@ const Footer = () => {
                 <div className="contact-item">
                   <FaPhone />
                   <div>
-                    <p>+91-9890374024</p>
-                    <p className="small">+91-9960198199</p>
+                    
+                    <p className>+91-9960198199</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <FaEnvelope />
-                  <p>krishnabhojwani@.com</p>
+                  <p>samarthnetralaya2002@gmail.com</p>
                 </div>
                 <div className="contact-item">
                   <FaMapMarkerAlt />
-                  <p>Chhapru Nagar Sq, Central Avenue, Nagpur 440008</p>
+                  <p>Shree Guru Darshan Complex, Chappru Chowk, Central Ave, Chapru Nagar, square, Nagpur, Maharashtra 440008, India</p>
                 </div>
               </div>
               
               <div className="hours-details">
-                <h4>Working Hours</h4>
-                <div className="hour-item">
-                  <FaClock />
-                  <span>Mon - Sat: {workingHours.weekdays}</span>
-                </div>
-                <div className="hour-item">
-                  <FaClock />
-                  <span>Sunday: {workingHours.sunday}</span>
-                </div>
-                <div className="hour-item emergency">
-                  <FaAmbulance />
-                  <span>Emergency: {workingHours.emergency}</span>
-                </div>
-              </div>
+  <h4>Working Hours</h4>
+  <div className="hour-item">
+    <FaClock />
+    <span>Morning: {workingHours.Morning}</span>
+  </div>
+  <div className="hour-item">
+    <FaClock />
+    <span>Evening: {workingHours.Evening}</span>
+  </div>
+  <div className="hour-item">
+    <FaClock />
+    <span>Sunday: {workingHours.sunday}</span>
+  </div>
+  <div className="hour-item emergency">
+    <FaAmbulance />
+    <span>Emergency: {workingHours.emergency}</span>
+  </div>
+</div>
             </motion.div>
           </div>
 
@@ -266,7 +270,7 @@ const Footer = () => {
             <div className="bottom-links">
               <Link to="/privacy">Privacy Policy</Link>
               <Link to="/terms">Terms of Service</Link>
-              <Link to="/sitemap">Sitemap</Link>
+             
             </div>
           </div>
         </div>

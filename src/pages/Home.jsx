@@ -86,18 +86,18 @@ const Home = () => {
   const doctor = {
     id: 1,
     name: "Dr. Krishna Bhojwani",
-    title: "MBBS / Ophthalmologist",
-    qualification: "MBBS, MS - Ophthalmology",
+    title: "MBBS,BOMS,DNB / Ophthalmologist",
+    qualification: "MBBS,BOMS,DNB - Ophthalmology",
     specialty: "Senior Ophthalmologist & Eye Surgeon",
     bio: "Seasoned ophthalmologist with a robust background in eye care and surgery. Committed to delivering high-quality patient care and innovative treatments. With over 15 years of experience, Dr. Bhojwani has transformed thousands of lives through advanced eye care procedures.",
     description: "Renowned ophthalmologist specializing in cataract, refractive surgery, and comprehensive eye care.",
     experience: "15+ Years",
     rating: 4.9,
     patients: 5000,
-    email: "krishna@samarthnetralaya.com",
+    email: "samarthnetralaya2009@gmail.com",
     phone: "+91 9890374024",
-    education: "MBBS, MS - Ophthalmology, FICO",
-    achievements: "Gold Medalist • 1000+ Successful Surgeries",
+    education: "MBBS,BOMS,DNB- Ophthalmology",
+    achievements: " 1000+ Successful Surgeries",
     imagePath: "/images/doctor.png"
   };
 
@@ -125,7 +125,7 @@ const Home = () => {
       description: "Advanced phacoemulsification surgery for painless cataract removal.",
       detailedDescription: "Micro-incision cataract surgery with premium lens implants for the best possible visual outcomes.",
       iconName: "GiHealing",
-      imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop"
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIRxP-wIYH22Ya16OXGIdgSWXkuYRFSBGY_EWGwU0dtaowO_4oEJdnNbM&s=10"
     },
     {
       id: 4,
@@ -165,7 +165,7 @@ const Home = () => {
     if (isFacilityAutoPlaying && facilities.length > 1) {
       interval = setInterval(() => {
         nextFacility();
-      }, 5000);
+      }, 10000);
     }
     return () => clearInterval(interval);
   }, [currentFacilityIndex, isFacilityAutoPlaying, facilities.length]);
@@ -188,12 +188,7 @@ const Home = () => {
     setTimeout(() => setIsFacilityAutoPlaying(true), 10000);
   };
 
-  const achievements = [
-    { icon: <GiHealing />, value: "25+", label: "Years Excellence", color: "#d4a373" },
-    { icon: <FaHospitalUser />, value: "50K+", label: "Happy Patients", color: "#c9977a" },
-    { icon: <FaUserMd />, value: "30+", label: "Expert Doctors", color: "#ba8a73" },
-    { icon: <FaTrophy />, value: "100+", label: "Awards Won", color: "#a87a63" }
-  ];
+
 
   const services = [
     { 
@@ -234,27 +229,51 @@ const Home = () => {
     }
   ];
 
-  // Testimonials without images - only message and full name
-  const testimonials = [
-    {
-      name: "Shefali Meshram",
-      rating: 5,
-      text: "Very neat and clean hospital. Very nice staff. Dr. Aron sir is best. One of the best Dr in Nagpur.",
-      location: "Nagpur"
-    },
-    {
-      name: "Anuradha Mitra",
-      rating: 5,
-      text: "Very pleasant hospital. Doctors and the staff here are so patient friendly. Most importantly the treatment is superb.",
-      location: "Mumbai"
-    },
-    {
-      name: "Kinjal Shah",
-      rating: 5,
-      text: "It's an example of State of Art Above and Beyond. Truly inspiring vision for patients of Nagpur.",
-      location: "Pune"
-    }
-  ];
+ // Testimonials without images - only message and full name
+const testimonials = [
+  {
+    name: "Shalikram Wakodikar",
+    rating: 5,
+    text: "I had my eye surgery yesterday, and it was a great experience. The doctor was highly skilled and caring, and the staff was very supportive. The surgery went smoothly, and I am very happy with the treatment. Thank you to entire team for the excellent care.",
+    location: "Nagpur"
+  },
+  {
+    name: "Sonal Yadav",
+    rating: 5,
+    text: "Very professional and experienced doctor. Treatment was effective and the staff also supportive. Highly recommended. Doctor explains everything clearly and treats patients with care and respect. Really thankful for the excellent treatment. One of the best doctors I have visited. Friendly nature, accurate diagnosis, and great guidance.",
+    location: "Nagpur"
+  },
+  {
+    name: "Suhani Dhawre",
+    rating: 5,
+    text: "Great doctor, amazing staff, and a beautiful facility. The appointment started right on time, the check-up was very thorough, and everything was explained clearly. A truly professional practice that I will gladly recommend to family and friends.",
+    location: "Nagpur"
+  },
+  {
+    name: "Rahulcmi",
+    rating: 5,
+    text: "I went for a routine eye checkup at Samarth Netralaya and had a wonderful experience. The staff is polite, waiting time is minimal, and the doctor gives personal attention to every patient. The consultation was detailed and helpful. Without any doubt, this is the Best Eye Clinic in Nagpur for regular eye care and treatment.",
+    location: "Nagpur"
+  },
+  {
+    name: "Bharath Naidu",
+    rating: 5,
+    text: "Excellent treatment by the doctor!!! Came in with someone for some urgent treatment and they did it very swiftly.",
+    location: "Nagpur"
+  },
+  {
+    name: "Babita Nagpure",
+    rating: 5,
+    text: "The doctor listens carefully to every concern and provides the best solution. Clinic atmosphere was also clean, nice, and has good staff.",
+    location: "Nagpur"
+  },
+  {
+    name: "Rohan deotare",
+    rating: 5,
+    text: "My LASIK experience at Samarth Netralaya was smooth and stress-free. Advanced technology, expert surgeons, and detailed post-procedure care made all the difference. I confidently recommend it as the best eye clinic in Nagpur for LASIK.",
+    location: "Nagpur"
+  }
+];
 
   const currentFacility = facilities[currentFacilityIndex];
 
@@ -484,31 +503,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Achievements Counter Section */}
-      <section className="achievements-premium-section">
-        <div className="achievements-bg"></div>
-        <div className="container">
-          <div className="achievements-grid">
-            {achievements.map((achievement, index) => (
-              <motion.div 
-                key={index}
-                className="achievement-premium-card"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="achievement-icon" style={{ color: achievement.color }}>
-                  {achievement.icon}
-                </div>
-                <h3 className="achievement-value">{achievement.value}</h3>
-                <p className="achievement-label">{achievement.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Single Doctor Section */}
       <section className="doctors-premium-section">
@@ -740,15 +735,16 @@ const Home = () => {
                     <div className="detail-icon"><FaEnvelope /></div>
                     <div>
                       <h4>Email</h4>
-                      <p>info@samarthnetralaya.com</p>
+                      <p>samarthnetralaya2009@gmail.com</p>
                     </div>
                   </div>
                   <div className="contact-detail">
                     <div className="detail-icon"><FaClock /></div>
                     <div>
                       <h4>Working Hours</h4>
-                      <p>Mon-Sat: 8:00 AM - 8:00 PM</p>
-                      <p>Sunday: By Appointment</p>
+                      <p>Mor: 10:00 AM - 2:00 AM</p>
+                      <p>Eve: 6:00 AM - 8:30 PM</p>
+                      <p>Sunday: Off</p>
                     </div>
                   </div>
                 </div>
@@ -756,17 +752,18 @@ const Home = () => {
                   Get Directions <FaChevronRight />
                 </button>
               </div>
-              <div className="location-map-premium">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.123456789012!2d79.084569!3d21.145823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0e5e5e5e5e5%3A0x1234567890abcdef!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0, borderRadius: '20px' }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  title="Clinic Location"
-                ></iframe>
-              </div>
+             <div className="location-map-premium">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7442.201622896594!2d79.124855!3d21.148386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c738970a6393%3A0x848317c26027652a!2sSamarth%20Netralaya!5e0!3m2!1sen!2sus!4v1783067432935!5m2!1sen!2sus" 
+    width="100%" 
+    height="100%" 
+    style={{ border: 0, borderRadius: '20px' }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="strict-origin-when-cross-origin"
+    title="Samarth Netralaya - Clinic Location"
+  ></iframe>
+</div>
             </div>
           </motion.div>
         </div>
